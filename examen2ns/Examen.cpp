@@ -27,7 +27,7 @@ std::vector<std::vector<Silla>> asientos(filas, std::vector<Silla>(columnas));
 
 // Función de reserva para hilos
 void* reservar(void* usuarioPtr) {
-    int usuario = (int )usuarioPtr;
+    int usuario = *(int* )usuarioPtr;
     srand(time(0) + usuario); // Semilla para la reserva
 
     while (true) {
